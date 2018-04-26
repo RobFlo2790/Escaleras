@@ -24,10 +24,20 @@ describe "Juego escaleras" do
 	
 	it "Cuando lanzo dado muevo jugador uno" do
 		juegoEscaleras = Tablero.new
-		jugador1 = 0
+		jugador = 0
 		resultado = juegoEscaleras.lanzarDado
-		juegoEscaleras.moverJugador jugador1,resultado
+		juegoEscaleras.moverJugador jugador,resultado
 		juegoEscaleras.obtenerPosicionJugadores[0].should_not == 0	
+	end
+
+	it "Cuando lanzo dado muevo jugador dos, mientras el uno esta en posicion 0" do
+		juegoEscaleras = Tablero.new
+		jugador1 = 0
+		jugador2 = 1
+		resultado = juegoEscaleras.lanzarDado
+		juegoEscaleras.moverJugador jugador2,resultado
+		juegoEscaleras.obtenerPosicionJugadores[jugador1].should == 0	
+		juegoEscaleras.obtenerPosicionJugadores[jugador2].should_not == 0
 	end
 
 end
