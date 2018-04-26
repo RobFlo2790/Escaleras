@@ -7,4 +7,8 @@ class Tablero
 	def obtenerTablero
 		return @@tablero	
 	end	
+
+	def lanzarDado
+		return 3
+	end
 end 
