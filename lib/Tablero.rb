@@ -2,7 +2,7 @@ class Tablero
 
 	def initialize
 		@@tablero = Array.new 16
-		@@jugadores = Array.new 2			
+		@@jugadores = Array.new 2,0			
 	end
 
 	def obtenerTablero
@@ -16,4 +16,8 @@ class Tablero
 	def obtenerPosicionJugadores
 		return @@jugadores
 	end 
+	
+	def moverJugador jugador,resultado
+		@@jugadores[jugador] += resultado
+	end
 end 

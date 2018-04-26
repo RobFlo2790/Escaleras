@@ -21,5 +21,13 @@ describe "Juego escaleras" do
 		juegoEscaleras =  Tablero.new	
 	  	juegoEscaleras.obtenerPosicionJugadores.size == 2
 	end
+	
+	it "Cuando lanzo dado muevo jugador uno" do
+		juegoEscaleras = Tablero.new
+		jugador1 = 0
+		resultado = juegoEscaleras.lanzarDado
+		juegoEscaleras.moverJugador jugador1,resultado
+		juegoEscaleras.obtenerPosicionJugadores[0].should_not == 0	
+	end
 
 end
