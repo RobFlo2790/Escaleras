@@ -1,7 +1,8 @@
 class Tablero 
 
 	def initialize
-		@@tablero = [0,15,30,40]				
+		@@tablero = Array.new 16
+		@@jugadores = Array.new 2			
 	end
 
 	def obtenerTablero
@@ -11,4 +12,8 @@ class Tablero
 	def lanzarDado
 		return 3
 	end
+	
+	def obtenerPosicionJugadores
+		return @@jugadores
+	end 
 end 
