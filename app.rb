@@ -4,6 +4,7 @@ require './lib/Tablero'
 
 get '/' do
     @dado = "Lanzar dado para iniciar"
+    @posicionActual = 1
     erb:tablero
 end
   

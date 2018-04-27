@@ -14,4 +14,9 @@ Scenario: Al lanzar el dado devuelve 3
 	When lanzo el dado
 	Then Veo un numero en el "resultadoDado"
 
+Scenario: Cuando inicia el juego veo mi posicion
+	  Given Visito la pagina principal
+	  Then Veo "Tu estas aqui: 1" 
+	
+
 	
