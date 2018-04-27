@@ -1,5 +1,5 @@
 require 'sinatra'
 
 get '/' do
-    "Escaleras y Serpientes"
+    erb:tablero
 end
