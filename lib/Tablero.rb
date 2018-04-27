@@ -9,8 +9,12 @@ class Tablero
 		return @@tablero	
 	end	
 
-	def lanzarDado
-		return 3
+	def lanzarDado valor=0
+		if valor == 0
+			return Random.rand 1..6
+		else
+			return valor
+		end
 	end
 	
 	def obtenerPosicionJugadores
