@@ -13,8 +13,8 @@ end
   
 
 get '/Lanzar' do
-    
-    @dado = @@juego.lanzarDado
+    mock = params['DadoEsperado'].to_i
+    @dado = @@juego.lanzarDado mock
     @posicionActual = ( params['posicionActual'].to_i  + @dado.to_i)
     @posicionNueva = "vas a: " + @posicionActual.to_s
     @mensajePosicion = ""

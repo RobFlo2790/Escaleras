@@ -15,4 +15,7 @@ Then(/^Veo un numero en el "(.*?)"$/) do |arg1|
 	last_response.body.should =~ /#{arg1}/m
 end 
 
-
+When(/^lanzo el dado y obtengo "(.*?)"$/) do |valor|	
+	@@juego.forzarDado valor
+	click_button("dado")		
+end

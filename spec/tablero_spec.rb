@@ -17,6 +17,12 @@ describe "Juego escaleras" do
 	  	juegoEscaleras.lanzarDado.size == 16
 	end
 	
+	it "Me aseguro de poder predecir cuanto da el dado para las pruebas" do
+		juegoEscaleras =  Tablero.new
+		juegoEscaleras.forzarDado 5
+	  	juegoEscaleras.lanzarDado.should == 5
+	end
+	
 	it "Cuando empiezo el juego tengo 2 jugadores" do
 		juegoEscaleras =  Tablero.new	
 	  	juegoEscaleras.obtenerPosicionJugadores.size == 2

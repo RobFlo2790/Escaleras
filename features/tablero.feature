@@ -23,7 +23,10 @@ Scenario: Cuando estoy jugando y tiro el dado veo mi nueva posicion
 	  When lanzo el dado
 	  Then Veo "vas a:"
 
-
+Scenario: Cuando estoy jugando y tiro el dado veo mi nueva posicion
+	  Given Visito la pagina principal
+	  When lanzo el dado y obtengo "2"
+	  Then Veo "Encontraste escalera"
 	
 
 	
