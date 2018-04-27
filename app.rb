@@ -1,5 +1,6 @@
 require 'sinatra'
- 
+require './lib/Tablero'
+
 
 get '/' do
     @dado = "Lanzar dado para iniciar"
@@ -8,6 +9,7 @@ end
   
 
 get '/Lanzar' do
-  @dado = '3'
+    juego = Tablero.new
+    @dado = juego.lanzarDado
     erb:tablero
 end
