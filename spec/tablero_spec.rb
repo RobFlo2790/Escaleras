@@ -56,5 +56,22 @@ describe "Juego escaleras" do
 		juegoEscaleras.moverJugador jugador1,resultado
 		juegoEscaleras.obtenerPosicionJugadores[jugador1].should == 10	
 	end
+   it "Cuando el jugador esta en posicion 32" do
+      juegoEscaleras = Tablero.new
+      jugador1 = 0
+      juegoEscaleras.forzarDado 6
+juegoEscaleras.moverJugador jugador1,6
+      juegoEscaleras.forzarDado 6
+juegoEscaleras.moverJugador jugador1,6
+      juegoEscaleras.forzarDado 6
+juegoEscaleras.moverJugador jugador1,6
+      juegoEscaleras.forzarDado 6
+juegoEscaleras.moverJugador jugador1,6
+      juegoEscaleras.forzarDado 6
+juegoEscaleras.moverJugador jugador1,6      
+      juegoEscaleras.forzarDado 2
+juegoEscaleras.moverJugador jugador1,2
+      juegoEscaleras.obtenerPosicionJugadores[jugador1].should == 32
+   end
 
 end
