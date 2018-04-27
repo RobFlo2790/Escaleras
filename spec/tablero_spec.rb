@@ -46,7 +46,7 @@ describe "Juego escaleras" do
 		juegoEscaleras.obtenerPosicionJugadores[jugador2].should_not == 0
 	end
 
-	it "Cuando el jugador uno esta en la posicion 6, el dos en la 3 y el jugador uno lanza el dado y recibe 3,el jugador uno cae en posicion 10" do
+	it "Cuando el jugador uno esta en la posicion 6, el dos en la 3 y el jugador uno lanza el dado y recibe 3,el jugador uno cae en 	posicion 10" do
 		juegoEscaleras = Tablero.new
 		jugador1 = 0
 		jugador2 = 1

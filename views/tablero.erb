@@ -1,18 +1,56 @@
 
-<h1>Escaleras y Serpientes</h1>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+<script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+</script>
+</head>
+<body>
+	<div class="container">
+		<h1>Escaleras y Serpientes</h1>
+		
 
-<p name="resultadoDado" id="resultadoDado">El valor del dado es: <%= @dado %></p>
+		
+	</div>
 
-<p name="posicionNueva" id="posicionNueva"><%= @posicionNueva %></p>
+<div class = "container" align = "center">
+	<div class = "row">
+	<div class="col-sm">
+      		<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+	  <div class="card-header">Zona del Dado</div>
+		  <div class="card-body">
+		    <h5 class="card-title">Lanza el dado y mira que sale</h5>
+		    <p class="card-text" name="resultadoDado" id="resultadoDado">El valor del dado es: <%= @dado %></p>
+		  </div>
+		<form action='/Lanzar' method='GET'>
+		<input type="hidden" value = "<%= @posicionActual %>" name="posicionActual" id="posicionActual">
+		<input type='submit' value="Tirar el dado" name="dado" id="dado" class="btn btn-secondary btn-lg active">
+		</form>
+	 </div>
+    	</div>
+	<div class="col-sm">
+	<div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+	  <div class="card-header">Posiciones</div>
+	   <div class="card-body">
+	    <h5 class="card-title">Miremos que sucede</h5>
+		<p class="card-text" name="posicionNueva" id="posicionNueva"><%= @posicionNueva %></p>
+	     <h5 class="card-title">Se acciono la casilla y ahora  ta ta taaaan!</h5>
+	     <div class="alert alert-secondary" role="alert">
+		  <p class="alert alert-info" name="mensajePosicion" id="mensajePosicion"><%= @mensajePosicion  %></p>
+	     </div>
+	     <div class="alert alert-secondary" role="alert">
 
-<p name="mensajePosicion" id="mensajePosicion"><%= @mensajePosicion  %></p>
-
-<p name="posicionActual" id="posicionActual">Tu estas aqui: <%= @posicionActual %></p>
-
-
-<form action='/Lanzar' method='GET'>
-<input type="hidden" value = "<%= @posicionActual %>" name="posicionActual" id="posicionActual">
-<input type='submit' value="dado" name="dado" id="dado">
-</form>
-
+		  <p class="alert alert-info" name="posicionActual" id="posicionActual">Tu estas aqui: <%= @posicionActual %></p>
+	     </div>
+		
+	   </div> 
+	   </div> 
+	   </div>
+	</div>
+</div>
+</div>
+</body>
 

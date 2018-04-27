@@ -8,6 +8,7 @@ get '/' do
     @posicionActual = 1
     @posicionNueva = "Estas en la casilla 1"
     @AccionPosicion = ""  
+	 @mensajePosicion = "Zona segura de inicio de tu aventura"
     erb:tablero
 end
   
@@ -17,7 +18,7 @@ get '/Lanzar' do
     @dado = @@juego.lanzarDado mock
     @posicionActual = ( params['posicionActual'].to_i  + @dado.to_i)
     @posicionNueva = "vas a: " + @posicionActual.to_s
-    @mensajePosicion = ""
+   
 	
 	accionPosicion = 0
 	if @posicionActual    == 1	
@@ -41,9 +42,11 @@ get '/Lanzar' do
 	end
 	
 	if (accionPosicion.to_i > 0)
-		@mensajePosicion = "Encontraste escalera"+ " +" + accionPosicion.to_s
-	else
-    		@mensajePosicion = "Encontraste culebra cascabel"+ " -" + accionPosicion.to_s
+		@mensajePosicion = "Caiste en un lugar desconocido pero ves una escalera y la subes "+ " +" + accionPosicion.to_s
+	elsif (accionPosicion.to_i <0)
+    		@mensajePosicion = "Caiste en un lugar desconocido lleno de culebras cascabel"+ " -" + accionPosicion.to_s
+	else 
+	   @mensajePosicion = "Zona segura"
         end
 	@posicionActual += accionPosicion
     erb:tablero
