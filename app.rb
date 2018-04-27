@@ -7,7 +7,8 @@ get '/' do
     @dado = "Lanzar dado para iniciar"
     @posicionActual = 1
     @posicionNueva = "Estas en la casilla 1"
-    @AccionPosicion = ""  
+    @AccionPosicion = ""
+    @Ganador = ""
     erb:tablero
 end
   
@@ -46,5 +47,8 @@ get '/Lanzar' do
     		@mensajePosicion = "Encontraste culebra cascabel"+ " -" + accionPosicion.to_s
         end
 	@posicionActual += accionPosicion
+        if @posicionActual >= 32
+            @mensajePosicion = "Felicidades, eres el GANADOR!"
+        end
     erb:tablero
 end
