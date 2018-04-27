@@ -14,3 +14,5 @@ end
 Then(/^Veo un numero en el "(.*?)"$/) do |arg1|
 	last_response.body.should =~ /#{arg1}/m
 end 
+
+

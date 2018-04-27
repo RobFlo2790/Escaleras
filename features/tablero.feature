@@ -22,6 +22,8 @@ Scenario: Cuando estoy jugando y tiro el dado veo mi nueva posicion
 	  Given Visito la pagina principal
 	  When lanzo el dado
 	  Then Veo "vas a:"
+
+
 	
 
 	
