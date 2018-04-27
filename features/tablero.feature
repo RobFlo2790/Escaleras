@@ -25,9 +25,13 @@ Scenario: Cuando estoy jugando y tiro el dado veo mi nueva posicion
 
 Scenario: Cuando estoy jugando y tiro el dado veo mi nueva posicion
 	  Given Visito la pagina principal
-	  When lanzo el dado y obtengo "2"
+	  When lanzo el dado y obtengo "1"
 	  Then Veo "Caiste en un lugar desconocido pero ves una escalera y la subes +"
 
+Scenario: Cuando estoy jugando y tiro el dado veo mi nueva posicion
+	  Given Visito la pagina principal
+	  When lanzo el dado y obtengo "12"
+	  Then Veo "Caiste en un lugar desconocido lleno de culebras cascabel"
 
 	
 

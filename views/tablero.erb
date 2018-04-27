@@ -9,7 +9,7 @@
 </script>
 </head>
 <body>
-	<div class="container">
+	<div class="container jumbotron" align="center">
 		<h1>Escaleras y Serpientes</h1>
 		
 
@@ -18,8 +18,8 @@
 
 <div class = "container" align = "center">
 	<div class = "row">
-	<div class="col-sm">
-      		<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+	<div class="col-xl-6">
+      		<div class="card text-white bg-primary mb-2" style="width:100%;">
 	  <div class="card-header">Zona del Dado</div>
 		  <div class="card-body">
 		    <h5 class="card-title">Lanza el dado y mira que sale</h5>
@@ -31,19 +31,19 @@
 		</form>
 	 </div>
     	</div>
-	<div class="col-sm">
-	<div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+	<div class="col-xl-6">
+	<div class="card text-white bg-secondary mb-2" style="width:100%;">
 	  <div class="card-header">Posiciones</div>
 	   <div class="card-body">
 	    <h5 class="card-title">Miremos que sucede</h5>
 		<p class="card-text" name="posicionNueva" id="posicionNueva"><%= @posicionNueva %></p>
 	     <h5 class="card-title">Se acciono la casilla y ahora  ta ta taaaan!</h5>
-	     <div class="alert alert-secondary" role="alert">
-		  <p class="alert alert-info" name="mensajePosicion" id="mensajePosicion"><%= @mensajePosicion  %></p>
+	     <div class="alert alert-info" role="alert">
+		  <h3><p class="alert alert-info" name="mensajePosicion" id="mensajePosicion"><%= @mensajePosicion  %></p><h3>
 	     </div>
-	     <div class="alert alert-secondary" role="alert">
+	     <div class="alert alert-info" role="alert">
 
-		  <p class="alert alert-info" name="posicionActual" id="posicionActual">Tu estas aqui: <%= @posicionActual %></p>
+		  <h4><p class="alert alert-info" name="posicionActual" id="posicionActual">Tu estas aqui: <%= @posicionActual %></p></h4>
 	     </div>
 		
 	   </div> 

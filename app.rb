@@ -26,20 +26,20 @@ get '/Lanzar' do
 	accionPosicion = 0
 	if @posicionActual    == 1	
 			accionPosicion = 1
-	elsif @posicionActual == 7
+	elsif @posicionActual == 2
 			accionPosicion = 1
 	
-	elsif @posicionActual == 3
-			accionPosicion = 1
+	elsif @posicionActual == 12
+			accionPosicion = -10
 
-	elsif @posicionActual == 9
-			accionPosicion = 1
+	elsif @posicionActual == 13
+			accionPosicion = -10
 
 	elsif @posicionActual == 18
-			accionPosicion = -1
+			accionPosicion = 1
 
 	elsif @posicionActual == 25
-	    		accionPosicion = -1
+	    		accionPosicion = 1
 	else 
 	        accionPosicion = 0
 	end
@@ -47,7 +47,7 @@ get '/Lanzar' do
 	if (accionPosicion.to_i > 0)
 		@mensajePosicion = "Caiste en un lugar desconocido pero ves una escalera y la subes "+ " +" + accionPosicion.to_s
 	elsif (accionPosicion.to_i <0)
-    		@mensajePosicion = "Caiste en un lugar desconocido lleno de culebras cascabel"+ " -" + accionPosicion.to_s
+    		@mensajePosicion = "Caiste en un lugar desconocido lleno de culebras cascabel"+ " " + accionPosicion.to_s
 	else 
 	   @mensajePosicion = "Zona segura"
         end
