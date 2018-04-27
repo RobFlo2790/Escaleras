@@ -5,8 +5,11 @@
 
 <p name="posicionActual" id="posicionActual">Tu estas aqui: <%= @posicionActual %></p>
 
+<p name="posicionNueva" id="posicionNueva"><%= @posicionNueva %></p>
+
 
 <form action='/Lanzar' method='GET'>
+<input type="hidden" value = "0" name="posicionActual" id="posicionActual">
 <input type='submit' value="dado" name="dado" id="dado">
 </form>
 
